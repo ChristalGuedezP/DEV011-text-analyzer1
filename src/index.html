@@ -7,10 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="contenido">
-        <h1>Analizador de Texto</h1>
-        <input type="text" name="nombredelacaja">
-    </div>
+  <header>
+    <h1>Analizador de texto</h1>
+    <textarea name="user-input" rows="5" cols="40" 
+    placeholder="Escribe aquí"></textarea>
+    <ul>
+      <li data-testid="word-count">Recuento de palabras:</li>
+      <li data-testid="character-count">Recuento de caracteres:</li>
+      <li data-testid="character-no-spaces-count">Recuento de caracteres excluyendo espacios y signos de puntuación:</li>
+      <li data-testid="number-count">Recuento de números:</li>
+      <li data-testid="number-sum">Suma de números:</li>
+      <li data-testid="word-length-average">Longitud media de palabras:</li>
+    </ul>  
+    </header>
+    <button id="reset-button" type="button">Limpiar</button>
+  <footer>
+    <p>Christal Guédez</p>
+  </footer>
   <script src="index.js" type="module"></script>
 </body>
 </html>
