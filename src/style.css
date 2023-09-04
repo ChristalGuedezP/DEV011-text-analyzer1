@@ -1,4 +1,4 @@
- body {
+  body {
 background-color: rgb(161, 161, 177);
 }
   
@@ -20,9 +20,8 @@ textarea[name="user-input"] {
     display: block;
     border-radius: 10px;
     font-family: cursive;
-  
-
-  }
+    }
+    
     ul {
         list-style: none;
         padding: 0;
