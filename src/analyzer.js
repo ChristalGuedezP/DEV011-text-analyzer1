@@ -16,12 +16,12 @@ const analyzer = {
   },
 
 ///CONTAR CARACTERES EXCLUYENDO ESPACIOS Y PUNTUACION///
-  getCharacterCountExcludingSpaces: (text) => {
-    const cleanText = text.replace(/[^\w\s]/g, '');
-    const characterCountExcludingSpaces = cleanText.length;
-    console.log(`Recuento de caracteres excluyendo espacios y signos de puntuación: ${characterCountExcludingSpaces}`);
-    return characterCountExcludingSpaces;
-  },
+getCharacterCountExcludingSpaces: (text) => {
+  const cleanText = text.replace(/[^\w]/g, "");
+  const characterCountExcludingSpaces = cleanText.length;
+  console.log(`Recuento de caracteres excluyendo espacios y signos de puntuación: ${characterCountExcludingSpaces}`);
+  return characterCountExcludingSpaces;
+},
 
 ///CONTEO DE NUMEROS///  
   getNumbersCount: (text) => {
@@ -35,17 +35,18 @@ const analyzer = {
   },
 
 ///SUMA DE NUMEROS///  
-  getNumbersSum: (text) => {
-    const numbers = text.match(/\d+/g);
+getNumbersSum: (text) => {
+  const numbers = text.match(/\d+/g);
 
-    if (!numbers) {
-      console.log('Suma de la longitud media de números: 0');
-      return 0;
-    }
-    const sum = numbers.reduce((total, number) => total + (number.length / numbers.length), 0);
-    console.log(`Suma de la longitud media de números: ${sum}`);
+  if (!numbers) {
+    console.log('Suma de los números: 0');
+    return 0;
+  }
 
-    return sum;
+  const sum = numbers.reduce((total, number) => total + parseInt(number, 10), 0);
+  console.log(`Suma de los números: ${sum}`);
+
+  return sum;
   },
 
 ///LONGITUD MEDIA DE PALABRAS///
@@ -62,3 +63,4 @@ const analyzer = {
 };
 
 export default analyzer;
+
