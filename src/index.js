@@ -1,7 +1,8 @@
 import analyzer from "./analyzer.js";
 
 // Llamar elementos del DOM
-const words = document.querySelector('[data-testied="word-count"]');
+const words = document.querySelector('[data-testid="word-count"]');
+
 
 // Limpiar caja de texto
 const textarea = document.querySelector('#prueba');
