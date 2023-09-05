@@ -1,25 +1,63 @@
 const analyzer = {  
+////CONTAR PALABRAS///
   getWordCount: (text) => {
-    console.log(text)
-
-
-    
-    //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    text = text.trim();
+    const words = text.split(/\s+/);
+    console.log(`Recuento de palabras: ${words.length}`);
+    return words.length;
   },
+
+///CONTAR CARACTERES///
   getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    text = text.trim();
+    const characterCount = text.length;
+    console.log(`Recuento de caracteres: ${characterCount}`);
+        return characterCount;
   },
+
+///CONTAR CARACTERES EXCLUYENDO ESPACIOS Y PUNTUACION///
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const cleanText = text.replace(/[^\w\s]/g, '');
+    const characterCountExcludingSpaces = cleanText.length;
+    console.log(`Recuento de caracteres excluyendo espacios y signos de puntuación: ${characterCountExcludingSpaces}`);
+    return characterCountExcludingSpaces;
   },
-  getAverageWordLength: (text) => {    
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+
+///CONTEO DE NUMEROS///  
+  getNumbersCount: (text) => {
+    const numbers = text.match(/\d+/g);
+    if (!numbers) {
+      console.log('Recuento de números: 0');
+      return 0;
+    }
+    console.log(`Recuento de números: ${numbers.length}`);
+    return numbers.length;
   },
-  getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+
+///SUMA DE NUMEROS///  
+  getNumbersSum: (text) => {
+    const numbers = text.match(/\d+/g);
+
+    if (!numbers) {
+      console.log('Suma de la longitud media de números: 0');
+      return 0;
+    }
+    const sum = numbers.reduce((total, number) => total + (number.length / numbers.length), 0);
+    console.log(`Suma de la longitud media de números: ${sum}`);
+
+    return sum;
   },
-  getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+
+///LONGITUD MEDIA DE PALABRAS///
+  getAverageWordLength: (text) => {
+    const words = text.split(/\s+/);
+
+    const totalLength = words.reduce((sum, word) => sum + word.length, 0);
+
+    const averageLength = totalLength / words.length;
+    console.log(`Longitud media de palabras: ${averageLength}`);
+
+    return averageLength;
   },
 };
 
