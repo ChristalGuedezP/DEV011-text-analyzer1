@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-  <meta charset="utf-8">
-  <title>Analizador de texto</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Analizador de texto</h1>
-    <textarea name="user-input" id="prueba" rows="5" cols="40" 
-    placeholder="Escribe aquí"></textarea>
-  </header>
-  
-  <section>
-    <ul>
-      <li data-testid="word-count">Recuento de palabras:<span id ="wordCount">0</span></li>
-      <li data-testid="character-count">Recuento de caracteres:<span id ="characterCount">0</span></li>
-      <li data-testid="character-no-spaces-count">Recuento de caracteres excluyendo espacios y signos de puntuación:<span id ="characterNoSpacesCount">0</span></li>
-      <li data-testid="number-count">Recuento de números:<span id ="numberCount">0</span></li>
-      <li data-testid="numbers-sum">Suma de números:<span id ="numbersSum">0</span></li>
-      <li data-testid="word-length-average">Longitud media de palabras:<span id ="wordLengthAverage">0</span></li>
-    </ul>
-    <button id="reset-button" type="button">Limpiar</button>
-  </section>
-  
-  <footer>
-    <p>Christal Guédez</p>
-  </footer>
-  
-  <script src="index.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Analizador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Analizador de texto</h1>
+      <textarea name="user-input" rows="5" cols="40" placeholder="Escribe aquí"></textarea>
+    </header>
+    <section>
+      <ul>
+        <li class="metricas" data-testid="word-count">
+          Recuento de palabras: 0</li>
+        <li class="metricas" data-testid="character-count">
+          Recuento de caracteres:0</li>
+        <li class="metricas" data-testid="character-no-spaces-count">
+          Recuento de caracteres excluyendo espacios y signos de
+          puntuación:0</li>
+        <li class="metricas" data-testid="number-count">
+          Recuento de números:0</li>
+        <li class="metricas" data-testid="numbers-sum">
+          Suma de números: 0</li>
+        <li class="metricas" data-testid="word-length-average">
+          Longitud media de palabras: 0</li>
+      </ul>
+      <button id="reset-button" type="button">Limpiar</button>
+    </section>
+
+    <footer>
+      <p>Christal Guédez</p>
+    </footer>
+
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
