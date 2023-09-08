@@ -33,21 +33,25 @@ ul {
   margin: 10px 0;
   padding: 10px;
   background-color: rgb(234, 234, 234);
-  border-radius: 10px;
+  border-radius: 20px;
   display: inline-block;
   font-family: cursive;
 }
+section {
+  text-align: center;
+}
 #reset-button {
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 10px 20px;
   background-color: rgb(234, 234, 234);
   color: #000000;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   font-family: cursive;
 }
 footer {
   font-family: cursive;
+  text-align: center;
 }
 
