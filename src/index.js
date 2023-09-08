@@ -2,7 +2,7 @@ import analyzer from "./analyzer.js";
 
 // Limpiar caja de texto
 const textarea = document.querySelector('textarea[name="user-input"]');
-const resetButton = document.querySelector("#reset-button");
+const resetButton = document.getElementById("reset-button");
 
 // Funciones
 textarea.addEventListener("keyup", () => {
@@ -44,7 +44,6 @@ textarea.addEventListener("keyup", () => {
   );
   wordLengthAverageLi.textContent = `Longitud media de palabras: ${longituddePalabras}`;
 });
-
 resetButton.addEventListener("click", () => {
   textarea.value = "";
 
@@ -74,4 +73,3 @@ resetButton.addEventListener("click", () => {
   numbersSumElement.textContent = "Suma de números: 0";
   wordLengthAverageElement.textContent = "Longitud media de palabras: 0";
 });
-
