@@ -12,7 +12,7 @@ textarea.addEventListener("keyup", () => {
   wordCountLi.textContent = `Recuento de palabras: ${contarPalabras}`;
 
   // Conteo de Caracteres
-  let contarCaracteres = analyzer.getCharacterCount(textarea.value);
+  const contarCaracteres = analyzer.getCharacterCount(textarea.value);
   const characterCountLi = document.querySelector(
     '[data-testid="character-count"]'
   );
