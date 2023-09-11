@@ -2,13 +2,9 @@ const analyzer = {
   // Contar palabras
   getWordCount: (text) => {
     text = text.trim();
-    const containsOnlySymbols = /^[.,;:"«»[\]{}()¿?¡!-]*$/.test(text);
-  
-    if (containsOnlySymbols || text === "") {
-      return 0;
-    }
-    const words = text.split(/\s+/);
-    return words.length;
+    const words = text.split(/\s+|[,.;:"«»[\]{}()¿?¡!-]+/);
+    const validWords = words.filter((word) => word !== "");
+    return validWords.length;
   },
   // Contar caracteres
   getCharacterCount: (text) => {
