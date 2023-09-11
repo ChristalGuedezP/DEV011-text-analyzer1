@@ -3,14 +3,14 @@ body {
 }
 
 header {
-  margin-bottom: 30px;
-  padding: 40px;
-  font-size: 45px;
+  margin-bottom: 60px;
+  padding: 25px;
+  font-size: 30px;
   font-family: cursive;
   color: rgb(34, 34, 34);
   text-align: center;
   background-color: rgb(234, 234, 234);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 textarea[name="user-input"] {
@@ -30,11 +30,11 @@ ul {
 }
 
 .metricas {
-  margin: 10px 0;
-  padding: 10px;
+  margin: 5px 450px;
+  padding: 5px;
   background-color: rgb(234, 234, 234);
   border-radius: 20px;
-  display: inline-block;
+  display: block;
   font-family: cursive;
 }
 section {
@@ -54,4 +54,3 @@ footer {
   font-family: cursive;
   text-align: center;
 }
-
